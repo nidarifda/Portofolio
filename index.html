@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ProMan - Personal Portfolio HTML Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Fixed Top Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <!-- Brand / Logo -->
+    <a class="navbar-brand" href="#">
+      <i class="fas fa-code"></i> NRC Portfolio
+    </a>
+
+    <!-- Toggler for mobile view -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#about">
+            <i class="fas fa-user"></i> About
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#skills">
+            <i class="fas fa-laptop-code"></i> Skills
+          </a>
+        </li>
+ 	<li class="nav-item">
+          <a class="nav-link" href="#education">
+            <i class="fas fa-book"></i> Education
+          </a>
+        </li>
+	<li class="nav-item">
+          <a class="nav-link" href="#experience">
+            <i class="fas fa-briefcase"></i> Experience
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">
+            <i class="fas fa-microscope"></i> Projects
+          </a>
+        </li>
+	<li class="nav-item">
+          <a class="nav-link" href="#certificate">
+            <i class="fas fa-medal"></i> Certificate
+          </a>
+	   </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#connect">
+            <i class="fas fa-envelope"></i> Contact
+          </a>  
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+
+
+
+<!-- About -->
+<div class="container-fluid about-section" id="about">
+  <div class="container text-center">
+
+    <!-- Typed headline -->
+    <h1 class="name-title">Nida Rifda Chairuli</h1>
+    <h2 class="about-roles about-typed-out d-inline"></h2>
+    <div class="about-typed-src d-none">
+  Data Scientist, Data Engineer, Data Analyst, Web Developer, Machine Learning Engineer
+</div>
+
+    <!-- Description -->
+    <p class="about-description">
+  Transforming data into intelligence.<br>
+  I build AI-driven systems spanning Machine Learning, Deep Learning, and NLP 
+  that give businesses an edge, accelerate growth, and redefine what’s possible.
+</p>
+
+    <!-- Photo -->
+    <div class="about-photo">
+      <img src="img/png2.jpg" alt="Nida Rifda Chairuli profile picture">
+    </div>
+
+    <!-- Buttons under the photo -->
+    <div class="about-actions">
+  <a href="asset/Nida%20Rifda%20Chairuli_CV.pdf" target="_blank" class="btn btn-info about-resume">
+    My Resume
+  </a>
+  <a href="https://www.linkedin.com/in/nida-rifda-chairuli/" target="_blank" class="btn btn-info about-resume">
+    LinkedIn
+  </a>
+</div>
+
+  </div>
+</div>
+<!-- End About -->
+
+
+<!-- Typed.js & init -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const about = document.querySelector('#about');
+    if (!about) return;
+
+    const outEl = about.querySelector('.about-typed-out');
+    const srcEl = about.querySelector('.about-typed-src');
+    if (!outEl || !srcEl) return;
+
+    const strings = srcEl.textContent
+      .split(',')
+      .map(s => s.trim())
+      .filter(Boolean);
+
+    new Typed(outEl, {
+      strings,
+      typeSpeed: 70,
+      backSpeed: 45,
+      backDelay: 1600,
+      smartBackspace: true,
+      loop: true,
+      showCursor: true,
+      cursorChar: '|'
+    });
+  });
+</script>
+
+
+
+
+<hr class="section-divider">
+
+
+<!-- Font Awesome (icons) -->
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/J6MdVr7qk6j7Sk3cGz4l6hY5W0U8n4nXK9zj2o6hKxHqYV4fM6Qe2tN6o0sO/1Y3q8aQYk5dA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+<section class="skills-areas" id="skills">
+  <div class="container">
+    <h2 class="skills-areas__title">Skills &amp; Tools</h2>
+
+    <div class="areas-grid">
+      <!-- Programming & Scripting -->
+      <article class="area-card">
+        <header class="area-card__head">
+          <i class="fas fa-code"></i>
+          <h3>Programming &amp; Scripting</h3>
+        </header>
+        <div class="area-card__items">
+          <span class="pill"><img src="img/python-logo.png" alt="">Python</span>
+          <span class="pill"><img src="img/R_logo.svg.png" alt="">R</span>
+          <span class="pill"><img src="img/sql_.png" alt="">SQL</span>
+          <span class="pill"><img src="img/js.png" alt="">JavaScript</span>
+          <span class="pill"><img src="img/html-logo.png" alt="">HTML</span>
+          <span class="pill"><img src="img/css.png" alt="">CSS</span>
+          <span class="pill"><img src="img/SAS.png" alt="">SAS</span>
+        </div>
+      </article>
+
+      <!-- Data Analysis & Visualization -->
+      <article class="area-card">
+        <header class="area-card__head">
+          <i class="fas fa-chart-line"></i>
+          <h3>Data Analysis &amp; Visualization</h3>
+        </header>
+        <div class="area-card__items">
+          <span class="pill"><img src="img/pandas.png" alt="">Pandas</span>
+          <span class="pill"><img src="img/numpy.png" alt="">NumPy</span>
+          <span class="pill"><img src="img/scipy.png" alt="">SciPy</span>
+          <span class="pill"><img src="img/scikitlearn.png" alt="">scikit-learn</span>
+          <span class="pill"><img src="img/matplot.png" alt="">Matplotlib</span>
+          <span class="pill"><img src="img/seaborn.png" alt="">Seaborn</span>
+          <span class="pill"><img src="img/powerBI-logo.png" alt="">Power BI</span>
+          <span class="pill"><img src="img/tableau.png" alt="">Tableau</span>
+          <span class="pill"><img src="img/looker.png" alt="">Looker</span>
+        </div>
+      </article>
+
+      <!-- Machine Learning -->
+      <article class="area-card">
+        <header class="area-card__head">
+          <i class="fas fa-robot"></i>
+          <h3>Machine Learning</h3>
+        </header>
+        <div class="area-card__items">
+          <span class="pill">Supervised</span>
+          <span class="pill">Unsupervised</span>
+          <span class="pill">Image Processing</span>
+          <span class="pill">Feature Engineering</span>
+          <span class="pill">Model Deployment</span>
+        </div>
+      </article>
+
+      <!-- Deep Learning AI -->
+      <article class="area-card">
+        <header class="area-card__head">
+          <i class="fas fa-brain"></i>
+          <h3>Deep Learning AI</h3>
+        </header>
+        <div class="area-card__items">
+          <span class="pill"><img src="img/tensor.png" alt="">TensorFlow</span>
+          <span class="pill">CNN</span>
+          <span class="pill">RNN / LSTM</span>
+          <span class="pill">Autoencoder</span>
+          <span class="pill">GAN</span>
+          <span class="pill">BERT</span>
+          <span class="pill">DistilBERT</span>
+          <span class="pill">RoBERTa</span>
+        </div>
+      </article>
+
+      <!-- Databases & Cloud Platforms -->
+      <article class="area-card">
+        <header class="area-card__head">
+          <i class="fas fa-database"></i>
+          <h3>Databases &amp; Cloud</h3>
+        </header>
+        <div class="area-card__items">
+          <span class="pill"><img src="img/mysql.png" alt="">MySQL</span>
+          <span class="pill"><img src="img/postgree.png" alt="">PostgreSQL</span>
+          <span class="pill"><img src="img/mongo.png" alt="">MongoDB</span>
+          <span class="pill"><img src="img/bigq.png" alt="">BigQuery</span>
+          <span class="pill"><img src="img/aws_logo.png" alt="">AWS</span>
+          <span class="pill"><img src="img/azure.png" alt="">Azure</span>
+          <span class="pill"><img src="img/gcp-1.png" alt="">GCP</span>
+          <span class="pill"><img src="img/ibm.png" alt="">IBM Cloud</span>
+          <span class="pill"><img src="img/S3.png" alt="">S3</span>
+        </div>
+      </article>
+
+      <!-- Tools & Platforms -->
+      <article class="area-card">
+        <header class="area-card__head">
+          <i class="fas fa-toolbox"></i>
+          <h3>Tools &amp; Platforms</h3>
+        </header>
+        <div class="area-card__items">
+          <span class="pill"><img src="img/git.png" alt="">Git</span>
+          <span class="pill"><img src="img/github.png" alt="">GitHub</span>
+          <span class="pill"><img src="img/gitlab.png" alt="">GitLab</span>
+          <span class="pill"><img src="img/stripe.png" alt="">Stripe</span>
+          <span class="pill"><img src="img/ms_office.png" alt="">Microsoft Office</span>
+          <span class="pill"><img src="img/gcp-1.png" alt="">Google Workspace</span>
+          <span class="pill"><img src="img/elementor.png" alt="">Elementor</span>
+	  <span class="pill"><img src="img/streamlit.png" alt="">Streamlit</span>
+	  <span class="pill"><img src="img/hug.png" alt="">Huggingface</span>
+        </div>
+      </article>
+
+      <!-- Project Management -->
+      <article class="area-card">
+        <header class="area-card__head">
+          <i class="fas fa-diagram-project"></i>
+          <h3>Project Management</h3>
+        </header>
+        <div class="area-card__items">
+          <span class="pill"><img src="img/jira.png" alt="">Jira</span>
+          <span class="pill"><img src="img/trello.png" alt="">Trello</span>
+          <span class="pill"><img src="img/slack.png" alt="">Slack</span>
+          <span class="pill"><img src="img/msproject.png" alt="">MS Project</span>
+        </div>
+      </article>
+
+      <!-- Languages -->
+      <article class="area-card">
+        <header class="area-card__head">
+          <i class="fas fa-language"></i>
+          <h3>Languages</h3>
+        </header>
+        <div class="area-card__items">
+          <span class="pill">Indonesian (Native)</span>
+          <span class="pill">English (Native)</span>
+          <span class="pill">Malay (Fluent)</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+<!-- Skills End-->
+
+
+
+
+
+<!-- Education Start -->
+<section id="education" class="edu-section">
+  <h2 class="edu-title">Education</h2>
+
+  <!-- MSc (Dual logos) -->
+  <article class="edu-item">
+    <div>
+      <h3 class="edu-head"><span class="edu-cap" aria-hidden="true">🎓</span>MSc in Data Science &amp; Business Analytics (Dual Degree)</h3>
+      <p class="edu-meta">
+        <span class="edu-strong">Asia Pacific University (APU), Malaysia &amp; De Montfort University (DMU), UK</span> &nbsp;•&nbsp; Jun 2024 – Jul 2025
+      </p>
+      <ul class="edu-list">
+        <li><span class="edu-bullet">📌</span><span class="edu-strong">Specialization:</span> Data Engineering (Machine Learning, Deep Learning, NLP, AWS Cloud, Business Intelligence)</li>
+        <li><span class="edu-bullet">🧪</span>Applied projects: Stock Forecasting, AML Detection, Customer Segmentation</li>
+      </ul>
+    </div>
+    <!-- Dual logos -->
+    <div class="edu-logo edu-logos--dual">
+      <img src="img/APU.png" alt="APU logo">
+      <img src="img/DMU.png" alt="DMU logo">
+    </div>
+  </article>
+
+  <!-- Bootcamp -->
+  <article class="edu-item">
+    <div>
+      <h3 class="edu-head"><span class="edu-cap" aria-hidden="true">🎓</span>Full-Stack Data Analytics Bootcamp</h3>
+      <p class="edu-meta">
+        <span class="edu-strong">RevoU</span> &nbsp;•&nbsp; May 2024 – Feb 2025
+      </p>
+      <ul class="edu-list">
+        <li><span class="edu-bullet">🧰</span><span class="edu-strong">Skills:</span> Python, PostgreSQL, Tableau, Power BI, A/B testing, EDA, dashboards</li>
+        <li><span class="edu-bullet">🧭</span>Built end-to-end ETL and analytics dashboards</li>
+      </ul>
+    </div>
+    <div class="edu-logo"><img src="img/Revou.png" alt="RevoU logo"></div>
+  </article>
+
+  <!-- Bachelor -->
+  <article class="edu-item">
+    <div>
+      <h3 class="edu-head"><span class="edu-cap" aria-hidden="true">🎓</span>Bachelor in Business Administration (Hons)</h3>
+      <p class="edu-meta">
+        <span class="edu-strong">Infrastructure University Kuala Lumpur (IUKL)</span> &nbsp;•&nbsp; Sept 2015 – Jun 2018
+      </p>
+      <ul class="edu-list">
+        <li><span class="edu-bullet">📌</span><span class="edu-strong">Specialization:</span> Finance &amp; Banking</li>
+        <li><span class="edu-bullet">📚</span>Focus: Risk Management, Corporate Finance, Banking Ops</li>
+      </ul>
+    </div>
+    <div class="edu-logo"><img src="img/iukl.png" alt="IUKL logo"></div>
+  </article>
+</section>
+<!-- Education End -->
+
+
+
+
+
+<!-- ===================== Experience (Vertical Timeline) ===================== -->
+<section class="xp-timeline" id="experience">
+  <h2 class="xp-title">Experience</h2>
+
+  <ul class="timeline">
+    <!-- LEFT card -->
+    <li class="item left">
+      <div class="card">
+        <h3 class="when">Sept 2024 – Jan 2025</h3>
+        <div class="role">Data Analyst Associate — <em>RevoU × Telekom</em></div>
+        <div class="muted">(Virtual Internship)</div>
+        <details>
+          <summary>Highlights</summary>
+          <ul class="highlights">
+            <li>Implemented customer segmentation (clustering) to identify strategic groups and improve campaign targeting.</li>
+            <li>Extracted behavioural and transactional data to reveal trends that guided strategic decisions and lifted performance.</li>
+            <li>Built Power BI and GA dashboards, turning KPIs into real-time, decision-ready insights.</li>
+            <li>Optimised marketing & sales strategies, boosting conversion by 15% and improving campaign ROI.</li>
+            <li>Automated recurring data prep with Python + SQL, cutting manual work by 40% and speeding delivery.</li>
+          </ul>
+        </details>
+      </div>
+
+      <!-- node + logo (stick to rail) -->
+      <div class="node">
+        <span class="dot" aria-hidden="true"></span>
+        <img class="logo" src="img/Revou.png" alt="RevoU logo">
+      </div>
+    </li>
+
+    <!-- RIGHT card -->
+    <li class="item right">
+      <div class="card">
+        <h3 class="when">May 2019 – Apr 2023</h3>
+        <div class="role">Business Operation Associate — Trust &amp; Safety, <em>Accenture</em></div>
+        <details>
+          <summary>Highlights</summary>
+          <ul class="highlights">
+            <li>Managed 500+ daily policy-enforcement cases, ensuring compliance and platform integrity while meeting SLAs.</li>
+            <li>Streamlined moderation workflows and triage to improve efficiency and throughput.</li>
+            <li>Proactive compliance/risk assessments reduced privacy incidents and strengthened data-protection adherence.</li>
+            <li>Maintained strict data handling; 98% accuracy in escalating flagged confidential data.</li>
+            <li>Analysed reports and alerts to spot emerging risk patterns, enabling timely escalations/interventions.</li>
+          </ul>
+        </details>
+      </div>
+
+      <div class="node">
+        <span class="dot" aria-hidden="true"></span>
+        <img class="logo" src="img/accenture.png" alt="Accenture logo">
+      </div>
+    </li>
+
+    <!-- LEFT card -->
+    <li class="item left">
+      <div class="card">
+        <h3 class="when">2018</h3>
+        <div class="role">Junior Intern Accountant — <em>Yes Accountants</em></div>
+        <details>
+          <summary>Highlights</summary>
+          <ul class="highlights">
+            <li>Reconciled bank statements with GL entries; resolved discrepancies and reduced errors by 98%.</li>
+            <li>Reviewed balance sheets & income statements; ensured audit readiness and regulatory compliance.</li>
+            <li>Supported month-end closings (reconciliations & checks) to cut closing time by 20%.</li>
+            <li>Researched accounting-standard updates and joined workshops to improve execution quality.</li>
+          </ul>
+        </details>
+      </div>
+
+      <div class="node">
+        <span class="dot" aria-hidden="true"></span>
+        <img class="logo" src="img/yes.png" alt="Yes Accountants logo">
+      </div>
+    </li>
+  </ul>
+</section>
+<!-- ======== Experience End ======== -->
+
+
+
+<!-- ========= Projects =========== -->
+<section id="projects" class="proj-section">
+  <h2 class="proj-title">Projects</h2>
+
+  <div class="proj-grid">
+
+  <!-- News Spelling & Grammar Correction -->
+  <article class="proj-card">
+    <div class="proj-badges">
+      <span class="badge badge-yellow">Python</span>
+      <span class="badge badge-orange">CSS</span>
+      <span class="badge badge-neon">NLP</span>
+      <span class="badge badge-pink">Streamlit</span>
+    </div>
+    <h3 class="proj-name">
+      <span class="proj-emoji" aria-hidden="true">🔎</span>
+      News Spelling & Grammar Correction
+    </h3>
+    <p class="proj-desc">
+      Develop a spelling and grammar correction by using News Headline for NLP project.
+    </p>
+    <p class="proj-links">
+      🚀 <a href="https://spellingcorrection.streamlit.app/" target="_blank">Live Demo</a>
+      🔗 <a href="https://github.com/yourusername/spelling-correction" target="_blank">GitHub Repo</a>
+    </p>
+  </article>
+
+  <!-- Fake News Detection -->
+  <article class="proj-card">
+    <div class="proj-badges">
+      <span class="badge badge-yellow">Python</span>
+      <span class="badge badge-orange">Flask</span>
+      <span class="badge badge-green">Machine Learning</span>
+      <span class="badge badge-blue">React</span>
+    </div>
+    <h3 class="proj-name">
+      <span class="proj-emoji" aria-hidden="true">🧙‍♂️</span>
+      Fake News Detection
+    </h3>
+    <p class="proj-desc">
+      Developed a model to classify news into true or fake using Python & React.
+    </p>
+    <p class="proj-links">
+      🚀 <a href="https://fakenews-demo-link.com" target="_blank">Live Demo</a>
+      🔗 <a href="https://github.com/yourusername/fake-news-detection" target="_blank">GitHub Repo</a>
+    </p>
+  </article>
+
+  <!-- Multi-series Stock Forecasting -->
+  <article class="proj-card">
+    <div class="proj-badges">
+      <span class="badge badge-yellow">Python</span>
+      <span class="badge badge-orange">Flask</span>
+      <span class="badge badge-red">TensorFlow</span>
+      <span class="badge badge-purple">Deep Learning</span>
+    </div>
+    <h3 class="proj-name">
+      <span class="proj-emoji" aria-hidden="true">💹</span>
+      Multi-series Stock Forecasting
+    </h3>
+    <p class="proj-desc">
+      Developed a system to predict NVIDIA stock prices using affiliated company signals with deep learning.
+    </p>
+    <p class="proj-links">
+      🚀 <a href="https://stockforecast-demo-link.com" target="_blank">Live Demo</a>
+      🔗 <a href="https://github.com/yourusername/stock-forecasting" target="_blank">GitHub Repo</a>
+    </p>
+  </article>
+
+  <!-- Behavioral Pattern to Combat AML -->
+  <article class="proj-card">
+    <div class="proj-badges">
+      <span class="badge badge-yellow">Python</span>
+      <span class="badge badge-leaf">Scikit-Learn</span>
+      <span class="badge badge-green">Machine Learning</span>
+    </div>
+    <h3 class="proj-name">
+      <span class="proj-emoji" aria-hidden="true">💸</span>
+      Behavioral Pattern to Combat Anti Money Laundering
+    </h3>
+    <p class="proj-desc">
+      Thesis project uncovering behavioral patterns to reduce 5–10% of false negatives. Deployed with Streamlit.
+    </p>
+    <p class="proj-links">
+      🚀 <a href="https://aml-detection-demo-link.com" target="_blank">Live Demo</a>
+      🔗 <a href="https://github.com/yourusername/aml-detection" target="_blank">GitHub Repo</a>
+    </p>
+  </article>
+
+  <!-- Tesla Stock GARCH Model -->
+  <article class="proj-card">
+    <div class="proj-badges">
+      <span class="badge badge-cyan">R</span>
+      <span class="badge badge-purple">Explainability</span>
+    </div>
+    <h3 class="proj-name">
+      <span class="proj-emoji" aria-hidden="true">📉</span>
+      TESLA Stock GARCH Model
+    </h3>
+    <p class="proj-desc">
+      A case study on TSLA using GARCH, performing one-step prediction in R.
+    </p>
+    <p class="proj-links">
+      🚀 <a href="https://tesla-garch-demo-link.com" target="_blank">Live Demo</a>
+      🔗 <a href="https://github.com/yourusername/tesla-garch" target="_blank">GitHub Repo</a>
+    </p>
+  </article>
+
+  <!-- Marketing Analysis -->
+  <article class="proj-card">
+    <div class="proj-badges">
+      <span class="badge badge-yellow">Python</span>
+      <span class="badge badge-green">EDA</span>
+    </div>
+    <h3 class="proj-name">
+      <span class="proj-emoji" aria-hidden="true">📊</span>
+      Marketing Analysis
+    </h3>
+    <p class="proj-desc">
+      Exploratory analysis of marketing KPIs and customer segments for actionable insights.
+    </p>
+    <p class="proj-links">
+      🚀 <a href="https://marketing-analysis-demo-link.com" target="_blank">Live Demo</a>
+      🔗 <a href="https://github.com/yourusername/marketing-analysis" target="_blank">GitHub Repo</a>
+    </p>
+  </article>
+
+</div>
+
+
+
+
+<!-- ===== Certifications (Two Columns, per-category carousels) ===== -->
+<section id="certs2col" class="c2">
+  <h2 class="c2-title">Certifications</h2>
+
+  <div class="c2-grid">
+    <!-- ------- Column 1: Cloud & Data Engineering ------- -->
+    <div class="c2-col">
+      <h3 class="c2-cat">Cloud &amp; Data Engineering</h3>
+
+      <div class="c2-carousel">
+        <button class="c2-nav prev" aria-label="Previous">
+          <svg viewBox="0 0 24 24" width="18" height="18">
+            <path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <div class="c2-viewport" role="region" aria-roledescription="carousel">
+          <ul class="c2-track">
+            <li class="c2-card">
+              <img class="c2-badge" src="img/cloud101.png" alt="AWS badge">
+              <h4 class="c2-name">Introduction to Cloud 101</h4>
+              <div class="c2-org">Amazon Web Services</div>
+              <div class="c2-date">August 2025</div>
+              <a class="c2-link" href="https://www.credly.com/earner/earned/badge/4f86227d-f735-4d04-bf54-c4aa9ab25938" target="_blank" rel="noopener">View Credential</a>
+            </li>
+            <li class="c2-card">
+              <img class="c2-badge" src="img/machine_learning.png" alt="AWS badge">
+              <h4 class="c2-name">Introduction to Machine Learning</h4>
+              <div class="c2-org">Amazon Web Services</div>
+              <div class="c2-date">August 2025</div>
+              <a class="c2-link" href="https://www.credly.com/earner/earned/badge/22d9c1d0-1c2f-4e26-8caf-98fb5648830d" target="_blank" rel="noopener">View Credential</a>
+            </li>
+            <li class="c2-card">
+              <img class="c2-badge" src="img/gen_ai.png" alt="AWS badge">
+              <h4 class="c2-name">Introduction to Generative AI</h4>
+              <div class="c2-org">Amazon Web Services</div>
+              <div class="c2-date">August 2025</div>
+              <a class="c2-link" href="https://www.credly.com/earner/earned/badge/3b820610-8e72-4b22-9595-e983b9083075" target="_blank" rel="noopener">View Credential</a>
+            </li>
+	    <li class="c2-card">
+              <img class="c2-badge" src="img/pic-1.png" alt="AWS badge">
+              <h4 class="c2-name">Data Engineering on AWS Foundations</h4>
+              <div class="c2-org">Amazon Web Services</div>
+              <div class="c2-date">May 2025</div>
+              <a class="c2-link" href="img/pic-1.png" target="_blank" rel="noopener">View Credential</a>
+            </li>
+	    <li class="c2-card">
+              <img class="c2-badge" src="img/large_scale.png" alt="AWS badge">
+              <h4 class="c2-name">Large Scale Data
+ Migrations to AWS</h4>
+              <div class="c2-org">Amazon Web Services</div>
+              <div class="c2-date">May 2025</div>
+              <a class="c2-link" href="img/large_scale.png" target="_blank" rel="noopener">View Credential</a>
+            </li>
+	    <li class="c2-card">
+              <img class="c2-badge" src="img/sustain_gen_ai.png" alt="AWS badge">
+              <h4 class="c2-name">Sustainability Strategies with Generative AI</h4>
+              <div class="c2-org">Amazon Web Services</div>
+              <div class="c2-date">May 2025</div>
+              <a class="c2-link" href="img/sustain_gen_ai.png" target="_blank" rel="noopener">View Credential</a>
+            </li>
+	    <li class="c2-card">
+              <img class="c2-badge" src="img/aws_storage.png" alt="AWS badge">
+              <h4 class="c2-name">Introduction to AWS Storage</h4>
+              <div class="c2-org">Amazon Web Services</div>
+              <div class="c2-date">May 2025</div>
+              <a class="c2-link" href="img/aws_storage.png" target="_blank" rel="noopener">View Credential</a>
+            </li>
+          </ul>
+        </div>
+
+        <button class="c2-nav next" aria-label="Next">
+          <svg viewBox="0 0 24 24" width="18" height="18">
+            <path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- ------- Column 2: Data Analytics & Visualization ------- -->
+    <div class="c2-col">
+      <h3 class="c2-cat">Data Analytics &amp; Visualization Certifications</h3>
+
+      <div class="c2-carousel">
+        <button class="c2-nav prev" aria-label="Previous">
+          <svg viewBox="0 0 24 24" width="18" height="18">
+            <path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <div class="c2-viewport" role="region" aria-roledescription="carousel">
+          <ul class="c2-track">
+            <li class="c2-card">
+              <img class="c2-badge" src="img/cert-1.png" alt="RevoU badge">
+              <h4 class="c2-name">Full-stack Data Analytics</h4>
+              <div class="c2-org">RevoU</div>
+              <div class="c2-date">Feb 2025</div>
+              <a class="c2-link" href="https://drive.google.com/file/d/13CBd92_w4vwGiE9nDx0JGhwNxBleHuHD/view" target="_blank" rel="noopener">View Credential</a>
+            </li>
+            <li class="c2-card">
+              <img class="c2-badge" src="img/cert-5.png" alt="Coursera badge">
+              <h4 class="c2-name">Data Analysis with R Programming</h4>
+              <div class="c2-org">Coursera</div>
+              <div class="c2-date">Apr 2023</div>
+              <a class="c2-link" href="https://coursera.org/share/73c4bd07b42adf4f9000110b452825ea" target="_blank" rel="noopener">View Credential</a>
+            </li>
+            <li class="c2-card">
+              <img class="c2-badge" src="img/cert-6.png" alt="Coursera badge">
+              <h4 class="c2-name">Share Data Through the Art of Visualization</h4>
+              <div class="c2-org">Coursera</div>
+              <div class="c2-date">Feb 2023</div>
+              <a class="c2-link" href="https://coursera.org/share/6aa5147417f58648755f0ef157c0b1ca" target="_blank" rel="noopener">View Credential</a>
+            </li>
+	    <li class="c2-card">
+              <img class="c2-badge" src="img/cert-2.png" alt="Coursera badge">
+              <h4 class="c2-name">Process Data from Dirty to Clean</h4>
+              <div class="c2-org">Coursera</div>
+              <div class="c2-date">Feb 2023</div>
+              <a class="c2-link" href="https://coursera.org/share/6f46fc9a72f226690fc5feb6b54b3ee2" target="_blank" rel="noopener">View Credential</a>
+            </li>
+	    <li class="c2-card">
+              <img class="c2-badge" src="img/cert-3.png" alt="Coursera badge">
+              <h4 class="c2-name">Prepare Data for Explorations</h4>
+              <div class="c2-org">Coursera</div>
+              <div class="c2-date">Feb 2023</div>
+              <a class="c2-link" href="https://www.coursera.org/account/accomplishments/certificate/RKCXCJ39RX8S" target="_blank" rel="noopener">View Credential</a>
+            </li>
+          </ul>
+        </div>
+
+        <button class="c2-nav next" aria-label="Next">
+          <svg viewBox="0 0 24 24" width="18" height="18">
+            <path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Inline JS for the carousels -->
+  <script>
+    document.querySelectorAll('#certs2col .c2-carousel').forEach(carousel => {
+      const viewport = carousel.querySelector('.c2-viewport');
+      const track    = carousel.querySelector('.c2-track');
+      const slides   = Array.from(track.children);
+      const prevBtn  = carousel.querySelector('.c2-nav.prev');
+      const nextBtn  = carousel.querySelector('.c2-nav.next');
+      let index = 0;
+
+      function update(){
+        track.style.transform = `translateX(${-index * viewport.clientWidth}px)`;
+        prevBtn.disabled = index === 0;
+        nextBtn.disabled = index === slides.length - 1;
+      }
+
+      // keep widths correct when container changes
+      new ResizeObserver(update).observe(viewport);
+
+      prevBtn.addEventListener('click', () => { if(index>0){ index--; update(); }});
+      nextBtn.addEventListener('click', () => { if(index<slides.length-1){ index++; update(); }});
+
+      // keyboard support (left/right when focused anywhere)
+      document.addEventListener('keydown', (e) => {
+        if (!carousel.closest(':hover')) return; // act on the hovered carousel
+        if (e.key === 'ArrowLeft')  prevBtn.click();
+        if (e.key === 'ArrowRight') nextBtn.click();
+      });
+
+      update();
+    });
+  </script>
+</section>
+
+
+
+ <!-- Connect Start -->
+<section id="connect" class="connect-section">
+  <div class="container text-center">
+    <h2 class="connect-title">Let's Connect!</h2>
+    <p class="connect-subtitle">
+      I'm always open to discussing new Data Science opportunities, or just 
+      chatting about data, tech, and finance. Feel free to reach out!
+    </p>
+    <div class="connect-location">
+      <i class="fas fa-map-marker-alt"></i>
+      Surabaya, Indonesia
+    </div>
+    <div class="connect-icons">
+      <a href="mailto:nidarifda14@gmail.com" class="connect-icon"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/nida-rifda-chairuli/" target="_blank" class="connect-icon"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/nidarifda" target="_blank" class="connect-icon"><i class="fab fa-github"></i></a>
+      <a href="resume.pdf" target="_blank" class="connect-icon"><i class="fas fa-file-alt"></i></a>
+    </div>
+    </div>
+</section>
+ <!-- Connect End -->
+
+
+    <!-- Let’s Connect floating button -->
+<a href="#" id="openConnect" class="back-to-top" aria-haspopup="dialog" aria-controls="connectModal">
+  Let’s connect
+</a>
+
+<!-- Modal -->
+<div id="connectModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="connectTitle" aria-hidden="true">
+  <div class="modal-content" role="document">
+    <button class="close-btn" id="closeConnect" aria-label="Close">×</button>
+
+    <h2 id="connectTitle" class="modal-title">
+      I’m always open to collaboration, feedback, or a friendly hello. Let’s connect!
+    </h2>
+
+    <form action="https://formspree.io/f/your-id" method="POST">
+      <div class="field-row">
+        <div class="field">
+          <label class="visually-hidden" for="cn-name">Your Name</label>
+          <input id="cn-name" name="name" type="text" placeholder="Your Name" required>
+        </div>
+        <div class="field">
+          <label class="visually-hidden" for="cn-email">Your Email</label>
+          <input id="cn-email" name="email" type="email" placeholder="Your Email" required>
+        </div>
+      </div>
+
+      <label class="visually-hidden" for="cn-subject">Subject</label>
+      <input id="cn-subject" name="subject" type="text" placeholder="Subject">
+
+      <label class="visually-hidden" for="cn-message">Message</label>
+      <textarea id="cn-message" name="message" placeholder="Message"></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</div>
+
+<!-- Minimal JS to open/close -->
+<script>
+  (function () {
+    const openBtn   = document.getElementById('openConnect');
+    const overlay   = document.getElementById('connectModal');
+    const closeBtn  = document.getElementById('closeConnect');
+
+    function openModal(e){
+      e && e.preventDefault();
+      overlay.classList.add('open');
+      overlay.removeAttribute('aria-hidden');
+      // focus first input for accessibility
+      const firstField = overlay.querySelector('input, textarea, button');
+      if (firstField) firstField.focus();
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(){
+      overlay.classList.remove('open');
+      overlay.setAttribute('aria-hidden','true');
+      openBtn.focus();
+      document.body.style.overflow = '';
+    }
+
+    openBtn.addEventListener('click', openModal);
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && overlay.classList.contains('open')) closeModal();
+    });
+  })();
+</script>
+
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/typed/typed.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
