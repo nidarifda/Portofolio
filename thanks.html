@@ -6,11 +6,12 @@
   <title>Thank You</title>
   <style>
     :root{
-      --bg1:#4facfe; --bg2:#00f2fe;
-      --card-bg: rgba(255,255,255,.12);
-      --card-border: rgba(255,255,255,.25);
-      --ink:#0b2569;
-      --btn:#ffffff; --btn-ink:#0a5bff;
+      --bg1:#0a0f2d;  /* dark navy */
+      --bg2:#1b2a59;  /* deep blue */
+      --card-bg: rgba(128, 0, 128, 0.15);  /* transparent purple */
+      --card-border: rgba(186, 85, 211, 0.4); /* purple border */
+      --btn:#ffffff; 
+      --btn-ink:#7c3aed; /* purple button text */
     }
 
     /* ---------- Page ---------- */
@@ -40,21 +41,17 @@
       backdrop-filter: blur(10px);
       background: var(--card-bg);
       border: 1px solid var(--card-border);
-      box-shadow: 0 18px 60px rgba(0,0,0,.25);
+      box-shadow: 0 18px 60px rgba(0,0,0,.35);
     }
 
     /* ---------- Robot ---------- */
-    .robot-wrap{
-      height:84px; margin-bottom:8px; pointer-events:none;
-    }
+    .robot-wrap{ height:84px; margin-bottom:8px; }
     .robot{
       font-size:64px; line-height:1;
       display:inline-block; position:relative;
       filter: drop-shadow(0 6px 12px rgba(0,0,0,.25));
       animation: bounce 1.6s ease-in-out infinite;
-      text-shadow: 0 0 12px rgba(255,255,255,.35);
     }
-    /* tiny waving hand next to the robot */
     .hand{
       position:absolute; right:-22px; top:-6px;
       font-size:28px; transform-origin: 70% 70%;
@@ -70,19 +67,9 @@
       50%{ transform: rotate(22deg); }
     }
 
-    h1{
-      font-size: 2.6rem; margin: 6px 0 10px;
-      letter-spacing:.4px;
-      text-shadow: 0 2px 8px rgba(0,0,0,.25);
-    }
-    p{
-      font-size: 1.08rem; margin: 0 auto 18px; max-width: 46ch;
-      color: rgba(255,255,255,.92);
-    }
-    .subtle{
-      font-size:.95rem; margin-top:2px;
-      color: rgba(255,255,255,.75);
-    }
+    h1{ font-size: 2.6rem; margin: 6px 0 10px; }
+    p{ font-size: 1.08rem; margin: 0 auto 18px; max-width: 46ch; }
+    .subtle{ font-size:.95rem; margin-top:2px; color: rgba(255,255,255,.75); }
 
     /* ---------- Button ---------- */
     .btn{
@@ -90,35 +77,23 @@
       margin-top: 18px; padding: 12px 22px;
       background: var(--btn); color: var(--btn-ink);
       font-weight: 700; text-decoration: none;
-      border-radius: 10px; border: 0;
-      box-shadow: 0 8px 24px rgba(10,91,255,.22);
+      border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(124,58,237,.35);
       transition: transform .15s ease, box-shadow .2s ease, opacity .2s ease;
     }
-    .btn:hover{ transform: translateY(-1px); box-shadow:0 12px 28px rgba(10,91,255,.28); }
+    .btn:hover{ transform: translateY(-1px); box-shadow:0 12px 28px rgba(124,58,237,.5); }
     .btn:active{ transform: translateY(0); opacity:.95; }
-    .btn .arr{ font-size:1.05em; }
-
-    /* ---------- Motion preference ---------- */
-    @media (prefers-reduced-motion: reduce){
-      *{ animation: none !important; transition: none !important; }
-    }
   </style>
 </head>
 <body>
-  <div class="thankyou-box" role="status" aria-live="polite">
-    <div class="robot-wrap" aria-hidden="true">
-      <span class="robot" aria-label="Friendly robot">🤖
-        <span class="hand">👋</span>
-      </span>
+  <div class="thankyou-box">
+    <div class="robot-wrap">
+      <span class="robot">🤖<span class="hand">👋</span></span>
     </div>
-
     <h1>Thank You!</h1>
     <p>Your message has been sent successfully. I’ll get back to you soon with a data-driven response.</p>
     <div class="subtle">In the meantime, feel free to explore my projects & dashboards.</div>
-
-    <a class="btn" href="index.html">
-      <span class="arr">⬅</span> Back to Home
-    </a>
+    <a class="btn" href="index.html">⬅ Back to Home</a>
   </div>
 </body>
 </html>
