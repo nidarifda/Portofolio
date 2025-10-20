@@ -957,108 +957,102 @@ html, body { background: var(--bg); }
 
 
 /* ===== Two-column Certifications (mini carousels) ===== */
-#certs2col.c2{
-  background:#0d1226;                       /* dark navy */
-  padding:72px 20px 20px;
-  font-family:"Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+#certs2col.c2 {
+  background: #0d1226;
+  padding: 72px 20px 20px;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Title */
-#certs2col .c2-title{
-  text-align:center;
-  color:#4dd0e1;
-  font-weight:800;
-  font-size:clamp(3rem,3vw,3.2rem);
-  letter-spacing:.4px;
-  margin:0 0 22px;
+#certs2col .c2-title {
+  text-align: center;
+  color: #4dd0e1;
+  font-weight: 800;
+  font-size: clamp(3rem, 3vw, 3.2rem);
+  margin: 0 0 22px;
 }
 
-/* Two columns */
-#certs2col .c2-grid{
-  max-width:1140px;
-  margin:0 auto;
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:40px 34px;
-  align-items:start;
-}
-#certs2col .c2-col{ min-width:0; }
-
-/* Category heading */
-#certs2col .c2-cat{
-  text-align:center;
-  color:#8cdcf1;
-  font-weight:800;
-  font-size:clamp(1.05rem,1.6vw,1.25rem);
-  margin:6px 0 12px;
+/* === two tabs layout === */
+#certs2col .c2-grid {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px 34px;
+  justify-content: center;
 }
 
-/* Carousel shell */
-#certs2col .c2-carousel{
-  position:relative;
-  background:rgba(255,255,255,.05);
-  border-radius:16px;
-  padding:22px 16px;
-  box-shadow:0 12px 28px rgba(0,0,0,.28);
-  overflow:visible; /* allow arrow rings to extend if needed */
+#certs2col .c2-cat {
+  text-align: center;
+  color: #8cdcf1;
+  font-weight: 800;
+  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+  margin: 6px 0 12px;
 }
 
-/* Viewport/track (one-at-a-time slide) */
-#certs2col .c2-viewport{
-  overflow:hidden;
-  border-radius:14px;
-  position:relative;
-  z-index:1; /* slides below arrows */
-}
-#certs2col .c2-track{
-  display:flex; gap:0; padding:0; margin:0; list-style:none;
-  transform:translateX(0);
-  transition:transform .45s cubic-bezier(.22,.61,.36,1);
+#certs2col .c2-carousel {
+  position: relative;
+  background: rgba(255,255,255,.05);
+  border-radius: 16px;
+  padding: 22px 16px;
+  box-shadow: 0 12px 28px rgba(0,0,0,.28);
 }
 
-/* Card */
-#certs2col .c2-card{
-  flex:0 0 100%;
-  background:#202538;
-  color:#e9eefc;
-  min-height:240px;
-  padding:24px 18px 20px;
-  border-radius:14px;
-  box-shadow:inset 0 0 0 1px rgba(255,255,255,.05);
-  text-align:center;
-  display:flex; flex-direction:column; align-items:center; justify-content:center;
+#certs2col .c2-viewport {
+  overflow: hidden;
+  border-radius: 14px;
+  position: relative;
 }
-#certs2col .c2-badge{ width:64px; height:64px; object-fit:contain; margin-bottom:12px; }
-#certs2col .c2-name{ font-weight:800; color:#fff; font-size:1.05rem; margin:4px 0 4px; }
-#certs2col .c2-org{ color:#c7d2f0; margin-bottom:2px; }
-#certs2col .c2-date{ color:#aab4d6; margin-bottom:8px; font-size:.95rem; }
-#certs2col .c2-link{ color:#48d1ff; font-weight:700; text-decoration:none; }
-#certs2col .c2-link:hover{ text-decoration:underline; }
 
-/* Arrows — solid background so both sides look identical */
-#certs2col .c2-nav{
-  position:absolute; top:50%; transform:translateY(-50%);
-  width:44px; height:44px; border-radius:50%;
-  border:1px solid rgba(255,255,255,.16);
-  background:#2a3246;                 /* SOLID: no color shift from bg underneath */
-  color:#cfe8ff;
-  display:grid; place-items:center; cursor:pointer;
-  box-shadow:0 6px 16px rgba(0,0,0,.22);
-  transition:background .15s ease, transform .15s ease;
-  z-index:3;
+#certs2col .c2-track {
+  display: flex;
+  transition: transform .45s cubic-bezier(.22,.61,.36,1);
 }
-/* place arrows INSIDE the card for perfect symmetry */
-#certs2col .c2-nav.prev{ left:8px; }
-#certs2col .c2-nav.next{ right:8px; }
 
-#certs2col .c2-nav:hover{ background:#33405a; transform:translateY(-50%) scale(1.04); }
-#certs2col .c2-nav:disabled{ opacity:.35; cursor:default; transform:translateY(-50%); }
+/* cards */
+#certs2col .c2-card {
+  flex: 0 0 100%;
+  background: #202538;
+  color: #e9eefc;
+  min-height: 240px;
+  padding: 24px 18px 20px;
+  border-radius: 14px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#certs2col .c2-badge { width:64px; height:64px; margin-bottom:12px; }
+#certs2col .c2-name { color:#fff; font-weight:800; }
+#certs2col .c2-org { color:#c7d2f0; }
+#certs2col .c2-date { color:#aab4d6; font-size:.95rem; }
+#certs2col .c2-link { color:#48d1ff; font-weight:700; text-decoration:none; }
+#certs2col .c2-link:hover { text-decoration:underline; }
 
-/* Responsive: stack columns */
-@media (max-width:900px){
-  #certs2col .c2-grid{ grid-template-columns:1fr; }
-  #certs2col .c2-nav.prev{ left:6px; }
-  #certs2col .c2-nav.next{ right:6px; }
+/* arrows */
+#certs2col .c2-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px; height: 44px; border-radius: 50%;
+  background: #2a3246; color: #cfe8ff;
+  display: grid; place-items: center;
+  cursor: pointer;
+  border: 1px solid rgba(255,255,255,.16);
+  transition: background .15s ease, transform .15s ease;
+}
+#certs2col .c2-nav.prev { left: 8px; }
+#certs2col .c2-nav.next { right: 8px; }
+#certs2col .c2-nav:hover { background:#33405a; transform:translateY(-50%) scale(1.04); }
+
+/* responsive */
+@media (max-width: 900px) {
+  #certs2col .c2-grid { grid-template-columns: 1fr; }
+  #certs2col .c2-nav.prev { left: 6px; }
+  #certs2col .c2-nav.next { right: 6px; }
 }
 
 
@@ -1132,4 +1126,5 @@ html, body { margin: 0; padding: 0; }
 .text-dark-green {
     color: #003400;
     border-bottom: 0px solid #003400;
+
 }
